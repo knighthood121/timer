@@ -12,15 +12,23 @@ function App() {
   const [seconds, setSeconds] = useState(0); 
   const [timerId, setTimerId] = useState(0);
 
+let hello;  
   const handleStart = () => {
     if (hourse < 0 || minutes < 0 || seconds < 0) {
-      alert("Invalid Input");
+      alert("Invalid Input Please enter positive number");
+      return;
+    } 
+    if (hourse == 0 || minutes == 0 || seconds == 0) {
+      alert("Please Enter some value !!!!");
       return;
     } if(hourse > 99 ){
       alert("Please Enter in 1 to 99");
       return;
     }
+    // const value = parseInt(e.target.value);
+     
     else {
+      console.log("hiiii")
       setIsStart(true);
     }
   }
@@ -49,8 +57,11 @@ function App() {
   const handleInput = (e) => {
     console.log(e.target.id, e.target.value);
     const value = parseInt(e.target.value);
+    //  hello = parseInt(e.target.value);
     const id = e.target.id;
+    
     const mins =0;
+    // handleStart(value);
     if (value) {
   
       setHours(mins + Math.floor(value/60));
@@ -60,6 +71,7 @@ function App() {
     } else {
       setSeconds(value);
     }
+    
   }
 
 
