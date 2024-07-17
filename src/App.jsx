@@ -50,10 +50,13 @@ function App() {
     console.log(e.target.id, e.target.value);
     const value = parseInt(e.target.value);
     const id = e.target.id;
-    if (id === 'hours') {
-      setHours(value);
-    } else if (id === 'minutes') {
-      setMinutes(value);
+    const mins =0;
+    if (value) {
+  
+      setHours(mins + Math.floor(value/60));
+      setMinutes(value%60);
+    
+
     } else {
       setSeconds(value);
     }
@@ -98,7 +101,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Countdown Timer</h1>
       {
         !isStart && <InputTimer
           handleStart={handleStart}
