@@ -6,6 +6,10 @@
   height: 100vh;
   background-color: cadetblue;
   text-align: center;
+  align-items: center;
+  display: grid;
+  
+
 }
 
 .input-box{
@@ -16,7 +20,7 @@
 
 .input-box > input{
   height: 50px;
-  width: 50px;
+  width: 30vw;
   border: none;
   outline: none;
   font-size: 20px;
