@@ -10,6 +10,7 @@ const ShowTimer = (props) => {
     } = props;
     return (
         <div className='show-contaienr'>
+            <h1>Countdown Timer</h1>
             <div className='timer-box'>
                 <div>{hourse < 10 ? `0${hourse}` : hourse}</div>
                 <span>:</span>
