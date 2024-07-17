@@ -3,19 +3,13 @@
 const InputTimer = ({ handleInput, handleStart }) => {
     return (
         <div className='input-container'>
+      <h1>Countdown Timer</h1>
             <div className='input-box'>
                 <input
                     type="number"
                     onChange={handleInput}
-                    id="hours" placeholder='HH' />
-                <input
-                    type="number"
-                    onChange={handleInput}
-                    id="minutes" placeholder='MM' />
-                <input
-                    type="number"
-                    onChange={handleInput}
-                    id="seconds" placeholder='SS' />
+                    id="hours" placeholder='Enter a value' />
+                
             </div>
             <button
                 onClick={handleStart}
